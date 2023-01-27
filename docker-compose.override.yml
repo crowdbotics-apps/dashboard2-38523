@@ -13,11 +13,11 @@ services:
       - "8000:${PORT}"
   postgres:
     environment:
-      POSTGRES_PASSWORD: <postgres_pwd>
+      POSTGRES_PASSWORD: "password"
     volumes:
       - postgres-data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5433:5432"
   redis:
     ports:
       - "6379:6379"
