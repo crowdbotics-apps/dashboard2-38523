@@ -1,8 +1,8 @@
 from .models import App
 from .serializers import AppSerializer
-from django.contrib.auth import get_user_model
 from rest_framework import generics, status
 from rest_framework.response import Response
+from django.contrib.auth import get_user_model
 from rest_framework.permissions import IsAuthenticated
 
 User = get_user_model()
