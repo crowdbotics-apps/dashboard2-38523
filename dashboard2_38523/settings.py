@@ -77,6 +77,7 @@ LOCAL_APPS = [
     'users.apps.UsersConfig',
     'dashboard2_38523.app',
     'dashboard2_38523.plan',
+    'dashboard2_38523.subscription',
 ]
 THIRD_PARTY_APPS = [
     'rest_framework',

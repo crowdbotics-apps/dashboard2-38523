@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 
 class PlanApiView(generics.GenericAPIView):
     serializer_class = PlanSerializer
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
     queryset = Plan.objects.all()
 
     def get(self, request):
@@ -20,7 +20,7 @@ class PlanApiView(generics.GenericAPIView):
 
 class PlanDetailsApiView(generics.GenericAPIView):
     serializer_class = PlanSerializer
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
 
     def get(self, request, id):
         plans = Plan.objects.filter(id=id).first()
