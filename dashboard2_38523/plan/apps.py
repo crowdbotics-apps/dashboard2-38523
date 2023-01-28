@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class PlanConfig(AppConfig):
-    name = 'plan'
+    name = 'dashboard2_38523.plan'
