@@ -28,4 +28,4 @@ COPY --chown=django:django . .
 RUN python3 manage.py collectstatic --no-input
 CMD waitress-serve --port=$PORT dashboard2_38523.wsgi:application
 
-RUN python3 manage.py loaddata plan_data.json
+# RUN python3 manage.py loaddata plan_data.json
