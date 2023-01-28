@@ -28,6 +28,7 @@ urlpatterns = [
     path("api/v1/", include("home.api.v1.urls")),
     path("api/v1/", include("dashboard2_38523.app.urls")),
     path("api/v1/", include("dashboard2_38523.plan.urls")),
+    path("api/v1/", include("dashboard2_38523.subscription.urls")),
     path("admin/", admin.site.urls),
     path("users/", include("users.urls", namespace="users")),
     path("rest-auth/", include("rest_auth.urls")),
