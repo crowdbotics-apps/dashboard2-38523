@@ -75,6 +75,7 @@ INSTALLED_APPS = [
 LOCAL_APPS = [
     'home',
     'users.apps.UsersConfig',
+    'dashboard2_38523.app',
 ]
 THIRD_PARTY_APPS = [
     'rest_framework',
