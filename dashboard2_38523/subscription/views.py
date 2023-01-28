@@ -6,10 +6,8 @@ from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from .serializers import SubscriptionSerializer
 from rest_framework.permissions import IsAuthenticated
-import logging
 
 User = get_user_model()
-
 
 class SubscriptionApiView(generics.GenericAPIView):
     serializer_class = SubscriptionSerializer
