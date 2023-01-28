@@ -6,11 +6,17 @@ from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from .serializers import SubscriptionSerializer
 from rest_framework.permissions import IsAuthenticated
+<<<<<<< HEAD
+
+User = get_user_model()
+
+=======
 import logging
 
 User = get_user_model()
 
 
+>>>>>>> master
 class SubscriptionApiView(generics.GenericAPIView):
     serializer_class = SubscriptionSerializer
     permission_classes = (IsAuthenticated,)
@@ -47,7 +53,7 @@ class SubscriptionDetailsApiView(generics.GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, id):
-        subscription = Subscription.objects.filter(id=id).first()
+        subscription = Subscription.objects.filter(id=id, user=request.user).first()
         context = { "request": request }
         if not subscription:
             return Response({'errors': 'that subscription was not found'}, status=status.HTTP_404_NOT_FOUND)
